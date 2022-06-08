@@ -1,0 +1,118 @@
+/*header styles*/
+.navigation {
+	display: inline-block;
+	margin-left: 40px;
+}
+.nav-li {
+	display: inline-block;
+}
+.header-bg {
+	background: grey;
+	padding: 20px;
+	position: fixed;
+	top: 0;
+	right:  0;
+	width: 100%;
+	z-index: 10;
+}
+.section-after-header {
+	margin-top: 65px;
+}
+body {
+	height: 1800px;
+	/*padding-top: 65px;*/
+}
+
+/*chat icon styles*/
+.chat-icon-img {
+	height: 100px;
+}
+.chat-icon {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+}
+
+/*position absolute & relative example*/
+.wraper-block {
+	width: 400px;
+	height: 400px;
+	background: yellow;
+	position: relative;
+}
+.block {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	z-index: 6;
+}
+.block2 {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: absolute;
+	right: 80px;
+	bottom: 80px;
+	z-index: 5;
+}
+.test {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/*image example*/
+.text-image {
+	position: absolute;
+	top: 100px;
+	right: 80px;
+	color: red;
+	font-size: 35px;
+}
+.image-wraper {
+	position: relative;
+	display: inline-block;
+}
+
+/*center*/
+.wraper {
+	width: 400px;
+	height: 400px;
+	background: yellow;
+	position: relative;
+}
+.wraper-center {
+	width: 150px;
+	height: 150px;
+	background: green;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg) scaleX(2);
+}
+
+
+/*car animation*/
+.car-img {
+	width: 300px;
+	animation: carmove 5s infinite 2s alternate;
+/*	animation-name: carmove;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-delay: 2s;
+	animation-direction: alternate;*/
+	position: absolute;
+}
+.car-block {
+	position: relative;
+}
+
+/*keyframes animation*/
+@keyframes carmove {
+	from{left: 0}
+	to {left: 1000px}
+}
+
