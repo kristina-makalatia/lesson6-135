@@ -3,7 +3,7 @@
 	display: inline-block;
 	margin-left: 40px;
 }
-.nav-li {
+.nav-item {
 	display: inline-block;
 }
 .header-bg {
@@ -18,9 +18,8 @@
 .section-after-header {
 	margin-top: 65px;
 }
-body {
-	height: 1800px;
-	/*padding-top: 65px;*/
+.nav-a:hover {
+	color:red;
 }
 
 /*chat icon styles*/
@@ -83,36 +82,83 @@ body {
 	height: 400px;
 	background: yellow;
 	position: relative;
+
+	/* transition-property: all;
+	transition-duration: 5s;
+	transition-timing-function: linear; */
+	/* transition-delay: 2s; */
+	transition: all 5s linear 2s;
 }
 .wraper-center {
 	width: 150px;
 	height: 150px;
-	background: green;
+	background: red;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%) rotate(45deg) scaleX(2);
+	transform: translate(-50%, -50%) rotate(45deg);
+
+	/* transition-property: all;
+	transition-duration: .2s; */
+	transition: all .2s;
 }
 
+/* hover effects */
+.wraper:hover {
+	background-color: blue;
+}
+.wraper-center:hover {
+	background-color: brown;
+	transform:translate(-50%, -50%) rotate(0deg);
+}
 
+/* .wraper:hover .wraper-center {
+	background-color: chartreuse;
+} */
 /*car animation*/
 .car-img {
 	width: 300px;
-	animation: carmove 5s infinite 2s alternate;
+	animation: carnewanimation 5s infinite 2s alternate;
 /*	animation-name: carmove;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-delay: 2s;
 	animation-direction: alternate;*/
-	position: absolute;
+	/* position: absolute; */
 }
 .car-block {
-	position: relative;
+	/* position: relative; */
 }
 
 /*keyframes animation*/
-@keyframes carmove {
-	from{left: 0}
-	to {left: 1000px}
+/* @keyframes carmove {
+	from{left: 0;}
+	to {left: 1000px;}
+} */
+
+
+@keyframes carnewanimation {
+	0% {transform: translateX(0);}
+	20% {transform: translateX(200px);}
+	50% {transform: translateX(400px);}
+	75% {transform: translateX(600px);}
+	100% {transform: translateX(800px);}
 }
 
+
+
+.image-test {
+	width: 1170px;
+	height: 400px;
+	object-fit: contain;
+}
+
+/* backgroudn image styles */
+.bg-image {
+	background-image: url('../images/photographer.jpg');
+	height: 700px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
